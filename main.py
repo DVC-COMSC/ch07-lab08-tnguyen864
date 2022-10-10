@@ -15,7 +15,8 @@ numbers.sort()
 print("List:", numbers)
 
 # Get new value to add to list 
-newNum = int(input("Enter value to add to list: "))
+print("Enter a value to add to list: ")
+newNum = int(input())
 numbers.append(newNum)
 
 # Sort list again
