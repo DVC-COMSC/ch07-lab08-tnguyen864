@@ -1,26 +1,38 @@
-# List for 5 int values
-numbers = []
-
 # Get values for list
-print("Enter 5 integer values:")
-i = 0
+values = input("Enter 5 integer values: ") 
+
+# Add values to list
+numbers = values.split()
 for i in range(5):
-    num = int(input())
-    numbers.append(num)
+    numbers[i] = int(numbers[i])
+
+# Print original list
+print("Original list:", numbers)
+
+# New sorted1 list
+sorted1 = []
 
 # Sort list 
-numbers.sort()
+for i in range(5):
+    index = numbers.index(min(numbers))
+    pop = numbers.pop(index)
+    sorted1.append(pop)
 
 # Print sorted list
-print("List:", numbers)
+print("Sorted list:", sorted1)
 
-# Get new value to add to list 
-print("Enter a value to add to list: ")
-newNum = int(input())
-numbers.append(newNum)
+# New sorted2 list
+sorted2 = []
+
+# Get value to add to list
+newNum = int(input("Enter a value to add to the list: "))
+sorted1.append(newNum)
 
 # Sort list again
-numbers.sort()
+for i in range(6):
+    index = sorted1.index(min(sorted1))
+    pop = sorted1.pop(index)
+    sorted2.append(pop)
 
-# Print updated and sorted list
-print("Updated list:", numbers)
+# Print updated list
+print("Updated sorted list:", sorted2)
